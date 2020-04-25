@@ -11,4 +11,29 @@ $ vagrant up
 $ vagrant destroy
 ```
 
+### Test machines connectivity
+```sh
+$ ansible mult -i hosts -m ping
+```
+Expeted response:
+```sh
+192.168.100.5 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+192.168.100.3 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+192.168.100.4 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+192.168.100.6 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+```
+
+
 
